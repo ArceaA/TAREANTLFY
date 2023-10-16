@@ -30,19 +30,20 @@ const Icons = () => {
       return 'Cargando...';
     }
   
-    if (field === 'nombre') {
-      return userData.name.first;
-    } else if (field === 'correo') {
-      return userData.email;
-    } else if (field === 'cumpleanos') {
-      return userData.dob.date;
-    } else if (field === 'direccion') {
-      return  userData.location.city;
-    } else if (field === 'telefono') {
-      return userData.phone;
-    } else if (field === 'contrasena') {
-      return userData.login.password;
-    }
+    if (field === "nombre" && userData.name) {
+    return `${userData.name.first} ${userData.name.last}`;
+  } else if (field === "correo" && userData.email) {
+    return userData.email;
+  } else if (field === "cumpleanos" && userData.dob) {
+    return userData.dob.date;
+  } else if (field === "direccion" && userData.location) {
+    return `${userData.location.street}, ${userData.location.city}`;
+  } else if (field === "telefono" && userData.phone) {
+    return userData.phone;
+  } else if (field === "contrasena" && userData.login) {
+    return userData.login.password;
+  }
+  return "Dato no encontrado";
   };
 
   const handleIconClick = (field) => {
