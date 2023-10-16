@@ -25,7 +25,7 @@ const Icons = () => {
     }
   }, [selectedField]);
 
-  const getFieldData = (field) => {
+  const getFieldData = (field: string) => {
     if (!userData) {
       return 'Cargando...';
     }
