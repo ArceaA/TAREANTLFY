@@ -1,0 +1,26 @@
+.icons-container {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+}
+/* Aumenta el tamaño del texto y aplica negritas cuando un campo está seleccionado */
+.selected-field {
+  font-size: 20px; /* Tamaño de fuente más grande */
+  font-weight: bold; /* Texto en negritas */
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: #27ae60;
+  margin: 15px; /* Ajusta el margen entre los iconos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background-color: #2ecc71;
+}
